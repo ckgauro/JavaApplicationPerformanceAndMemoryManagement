@@ -1,0 +1,9 @@
+/**
+ * 
+ */
+/**
+ * @author Matt
+ *
+ */
+module ExploringStrings {
+}

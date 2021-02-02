@@ -1,0 +1,4 @@
+
+module EscapingReferencesClient {
+	requires EscapingReferences;
+}
