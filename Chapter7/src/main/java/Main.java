@@ -8,23 +8,27 @@ public class Main {
         records.addCustomer(new Customer("John"));
         records.addCustomer(new Customer("Simon"));
 
-        //records.getCustomers().clear();
-//        for (Customer next : records.getCustomers().values())
-//        {
-//            System.out.println(next);
-//        }
+        records.find("John").setName("Chandra");
+        records.addCustomer(new Customer("rag"));
+      //  records.getCustomers().clear();
+        for (Customer next : records.getCustomers().values())
+        {
+            System.out.println(next);
+        }
+
+        System.out.println(records.find("John"));
 
         //Implemented Itra
-        for(Customer next:records){
-            System.out.println(next);
-        }
-
-        Iterator<Customer> it=records.iterator();
-        it.next();
-        it.remove();
-        for(Customer next:records){
-            System.out.println(next);
-        }
+//        for(Customer next:records){
+//            System.out.println(next);
+//        }
+//
+//        Iterator<Customer> it=records.iterator();
+//        it.next();
+//        it.remove();
+//        for(Customer next:records){
+//            System.out.println(next);
+//        }
 
 
 
