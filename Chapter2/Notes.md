@@ -229,4 +229,105 @@ c1--> Native level from 1 to 3
 c2 ---> Native level 4
 
 
-java -XX:+UnlockDiagnosticVMOptions -XX+LogCompilation Main 500
+### java -XX:+UnlockDiagnosticVMOptions -XX:+LogCompilation Main 500
+
+```
+After executing above command. We can see hotspot_pid22615.log file where it stores all the informations.
+
+```
+
+java -XX:+PrintCodeCache Main 5000
+
+```
+Chandras-MacBook-Pro:java ckgauro$ java -XX:+PrintCodeCache Main 5000
+CodeHeap 'non-profiled nmethods': size=120032Kb used=26Kb max_used=26Kb free=120005Kb
+ bounds [0x0000000127a12000, 0x0000000127c82000, 0x000000012ef4a000]
+CodeHeap 'profiled nmethods': size=120028Kb used=132Kb max_used=132Kb free=119895Kb
+ bounds [0x00000001204db000, 0x000000012074b000, 0x0000000127a12000]
+CodeHeap 'non-nmethods': size=5700Kb used=986Kb max_used=999Kb free=4713Kb
+ bounds [0x000000011ff4a000, 0x00000001201ba000, 0x00000001204db000]
+ total_blobs=328 nmethods=95 adapters=146
+ compilation: enabled
+              stopped_count=0, restarted_count=0
+ full_count=0
+
+
+```
+
+java -XX:+PrintCodeCache Main 5000
+
+InitialCodeCacheSize
+ReservedCodeSize
+CodeCacheExpansionSize
+
+java -XX:+PrintCodeCache Main 5000
+
+InitialCodeCacheSize
+ReservedCodeSize
+CodeCacheExpansionSize
+
+java -XX:ReservedCodeCacheSize=20mb Main 5000
+
+InitialCodeCacheSize
+ReservedCodeSize
+CodeCacheExpansionSize
+
+### Jconsole where it stores all the running process
+It is stored in hsperfdata_Matt
+Jconsole.exe or Jconsole.sh
+
+### java -client -XX:+PrintCompilation Main 15000
+
+### java -server -XX:+PrintCompilation Main 15000
+
+### java -d64 -XX:+PrintCompilation Main 15000
+
+
+### java -d64 -XX:-TieredCompilation  -XX:+PrintCompilation Main 15000
+
+
+### java -d64 -XX:+PrintCompilation Main 15000
+
+
+### java -XX:+PrintFlagsFinal
+```
+CCompilerCount to display how many compiler to count
+```
+
+
+### jps
+```
+Display java running process id
+```
+
+### jinfo -flag CICompilerCount 10192
+
+### java -d64 -XX:+PrintCompilation Main 15000
+
+### java -XX:CICompilerCount=6 -XX:CompilerThreshold=1000 -XX:+PrintCompilation Main 15000
+
+
+-------
+
+Section 4
+
+### The Stack
+
+> Follows Stack data structure. 
+> Each Thread has own stack.
+> It stores local variables
+>  Local variables are stored in stack
+
+The Heap
+> It stores complex objects.
+> It can access by multiple objects
+> Pointer of instance object always lives in a stack.  
+> Objects are stored on the heap
+> Variables are a reerence to the object are stored in stack
+
+
+Section 6
+Pass by value
+Pass by reference
+
+### final variable can be assigned only once
