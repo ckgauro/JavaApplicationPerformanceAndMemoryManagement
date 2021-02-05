@@ -1,3 +1,7 @@
+package com.gauro.escapingreferences.customers;
+
+import com.gauro.escapingreferences.customers.customerImplementation.Customer;
+
 import java.util.Collections;
 import java.util.HashMap;
 import java.util.Iterator;

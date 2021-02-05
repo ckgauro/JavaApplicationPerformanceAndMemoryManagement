@@ -1,3 +1,7 @@
+import com.gauro.escapingreferences.customers.CustomerRecords;
+import com.gauro.escapingreferences.customers.ReadOnlyCustomer;
+import com.gauro.escapingreferences.customers.customerImplementation.Customer;
+
 import java.util.Iterator;
 
 public class Main {

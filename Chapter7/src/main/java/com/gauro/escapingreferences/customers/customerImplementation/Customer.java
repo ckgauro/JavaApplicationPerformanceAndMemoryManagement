@@ -1,3 +1,7 @@
+package com.gauro.escapingreferences.customers.customerImplementation;
+
+import com.gauro.escapingreferences.customers.ReadOnlyCustomer;
+
 public class Customer implements ReadOnlyCustomer {
     private String name;
 
