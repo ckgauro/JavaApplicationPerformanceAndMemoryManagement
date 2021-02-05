@@ -28,7 +28,14 @@ public class CustomerRecords implements Iterable<Customer>{
         return records.values().iterator();
     }
 
-    public Customer find(String name){
+//    //For set Find
+//    public Customer find(String name){
+//
+//        return new Customer((records.get(name)));
+//        //  return records.get(name);
+//    }
+
+    public ReadOnlyCustomer find(String name){
 
         return new Customer((records.get(name)));
       //  return records.get(name);

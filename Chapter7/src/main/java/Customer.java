@@ -1,6 +1,7 @@
-public class Customer {
+public class Customer implements ReadOnlyCustomer {
     private String name;
 
+    @Override
     public String getName() {
         return name;
     }
@@ -17,6 +18,7 @@ public class Customer {
         this.name=c.getName();
     }
 
+    @Override
     public String toString() {
         return name;
     }

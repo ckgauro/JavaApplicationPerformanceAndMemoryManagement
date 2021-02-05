@@ -8,7 +8,12 @@ public class Main {
         records.addCustomer(new Customer("John"));
         records.addCustomer(new Customer("Simon"));
 
-        records.find("John").setName("Chandra");
+      //  records.find("John").setName("Chandra");
+
+        ReadOnlyCustomer c=records.find("John");
+        Customer customer=(Customer) c;
+        customer.setName("Chandra");
+
         records.addCustomer(new Customer("rag"));
       //  records.getCustomers().clear();
         for (Customer next : records.getCustomers().values())
